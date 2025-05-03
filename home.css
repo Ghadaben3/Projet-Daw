@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    display: none;
+}
+.navbar{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0 ;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s ease;  
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.navbar ul {
+    display: flex;
+    margin:0;
+   
+}
+.navbar ul li a{
+    position: relative;
+    padding: 20px 15px;
+    color: white ;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.navbar ul li a:before{
+    content: '';
+    position: absolute;
+    background-color:white;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    margin: 0 auto;
+    transition: 0.5s ease;
+}
+.navbar ul li a:hover:before{
+    width: 80%;
+}
+
+.top-social{
+    display: flex;
+    align-items: center;
+}
+.top-social ul {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    list-style: none;
+}
+
+.top-social ul li {
+    display: inline-block;
+}
+.top-social ul li a{
+    color: white;
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+.top-social ul li a:before {
+    display: none;
+}
+.top-social ul li a i {
+    display: inline-block; 
+}
+.logo{
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    width: 50%;
+    margin-left: 2%;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    height: 75vh;
+    padding-top: 80px;
+    margin-top: 50px;
+}
+.content h1{
+    font-family: "Rowdies", sans-serif;
+    font-size: 120px;
+    color: white;
+    font-weight: 600;
+}
+.content p{
+    margin: 20px 0 40px;
+    color: white;
+    text-align: center; 
+    max-width: 800px; 
+    line-height: 1.6;
+}
+ 
+button{
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+button:hover{
+    background-color:white;
+    color: black;
+}
+ 
+.search-container {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 200px;
+    border: 1px solid white;
+}
+
+.search-icon {
+    color: white;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.top-social ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.top-social ul li a {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+@media(min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+/* For mobile phones (portrait) */
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.8rem;
+        margin-left: 10px;
+    }
+    
+    .content h1 {
+        font-size: 60px;
+    }
+    
+    .content p {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    
+    .search-box {
+        width: 150px;
+    }
+}
+  
+@media (min-width: 577px) and (max-width: 992px) {
+    .logo {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+    
+    section{
+        width: 80%;
+        margin: 80px auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+.icon-youtube:before { content: "▶️"; }
+.icon-pinterest:before { content: "📌"; }
+.icon-instagram:before { content: "📷"; }
+  
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+  
+.footer-policies {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+  
+.footer-policies a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+  
+.footer-policies a:hover {
+    text-decoration: underline;
+}
+  
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+.language-selector a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+  
+.language-selector a:hover {
+    text-decoration: underline;
+}
